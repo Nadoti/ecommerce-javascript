@@ -1,0 +1,11 @@
+const ProductScreen = {
+  render() {
+
+    return `
+      
+    
+    
+    
+    `
+  }
+}
