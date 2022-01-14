@@ -12,15 +12,20 @@ const HomeScreen = {
     const products = await response.json()
     console.log(products)
     return `
+    <div class="main">
       ${products.map(product => `
-
-        <div class="main_product">
-          <img class="main_img" src="${product.image}" alt="">
-          <h2 class="main_title">${product.name}</h1>
-          <button class="main_btn">COMPRAR</button>
-        </div>
+        
+          <div class="main_home">
+            <a href="/#/product/${product.id}">
+              <img class="main_img" src="${product.image}" alt="">
+            </a>
+            <h2 class="main_title">${product.name}</h1>
+            <button class="btn_home">COMPRAR</button>
+          </div>
+        
       
       `).join("\n")}
+    </div>
     `
   } 
 }

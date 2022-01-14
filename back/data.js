@@ -2,7 +2,7 @@ module.exports =  {
   products: [
     {
       id: 1,
-      name: "morango",
+      name: "Morango",
       qntStock: 16,
       image: '/images/morango.png'
     },
