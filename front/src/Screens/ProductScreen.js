@@ -2,6 +2,12 @@ import { parseRequestUrl } from "../utils.js"
 import { getProduct } from "../api.js"
 
 const ProductScreen = {
+  after_render() {
+    const request = parseRequestUrl()
+    document.querySelector(".btn_product").addEventListener("click", () => {
+      document.location.hash = `/cart/${request.id}`
+    })
+  },
   async render() {
     const request = parseRequestUrl()
     const product = await getProduct(request.id)
