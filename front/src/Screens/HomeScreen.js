@@ -1,4 +1,7 @@
 const HomeScreen = {
+  after_render() {
+    
+  },
   async render() {
     const response = await fetch("http://localhost:3000/api/products", {
       headers: {
