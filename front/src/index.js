@@ -1,6 +1,8 @@
+import AboutScreen from "./Screens/AboutScreen.js";
 import CartScreen from "./Screens/CartScreen.js";
 import Error404Screen from "./Screens/Error404Screen.js";
 import HomeScreen from "./Screens/HomeScreen.js";
+import LoginScreen from "./Screens/LoginScreen.js";
 import ProductScreen from "./Screens/ProductScreen.js";
 import { parseRequestUrl } from "./utils.js";
 
@@ -8,7 +10,9 @@ const routes = {
   "/": HomeScreen,
   "/product/:id": ProductScreen,
   "/cart": CartScreen,
-  "/cart/:id": CartScreen
+  "/cart/:id": CartScreen,
+  "/about": AboutScreen,
+  "/login": LoginScreen
 }
 
 const router = async () => {

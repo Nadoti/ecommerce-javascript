@@ -9,3 +9,8 @@ export const parseRequestUrl = () => {
     action: request[3]
   }
 }
+
+export const rerender = async(component) => {
+  document.querySelector(".main_container").innerHTML = await component.render()
+  await component.after_render()
+}
