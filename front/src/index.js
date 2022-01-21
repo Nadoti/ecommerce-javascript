@@ -25,7 +25,13 @@ const router = async () => {
   const screen = routes[parseUrl] ? routes[parseUrl] : Error404Screen
   const main = document.querySelector(".main_container")
   main.innerHTML = await screen.render()
-  screen.after_render()
+  
+  if(parseUrl === "/") {
+    screen.after_render()
+  } else {
+    await screen.after_render()
+  }
+  
 }
 
 window.addEventListener("load", router)
