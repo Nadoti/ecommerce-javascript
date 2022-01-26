@@ -11,7 +11,7 @@ const ProductScreen = {
   async render() {
     const request = parseRequestUrl()
     const product = await getProduct(request.id)
-    console.log(product)
+    console.log(request)
     if(product.error) {
       return `<div>${product.error}</div>`
     }

@@ -4,6 +4,8 @@ import Error404Screen from "./Screens/Error404Screen.js";
 import HomeScreen from "./Screens/HomeScreen.js";
 import LoginScreen from "./Screens/LoginScreen.js";
 import ProductScreen from "./Screens/ProductScreen.js";
+import SearchScreen from "./Screens/SearchScreen.js";
+import search from "./search.js";
 import { parseRequestUrl } from "./utils.js";
 
 const routes = {
@@ -12,7 +14,8 @@ const routes = {
   "/cart": CartScreen,
   "/cart/:id": CartScreen,
   "/about": AboutScreen,
-  "/login": LoginScreen
+  "/login": LoginScreen,
+  "/search/:id": SearchScreen
 }
 
 const router = async () => {
@@ -36,3 +39,4 @@ const router = async () => {
 
 window.addEventListener("load", router)
 window.addEventListener("hashchange", router)
+search()

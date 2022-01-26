@@ -20,6 +20,18 @@ app.get("/api/products/:id", (req,res) => {
   }
 })
 
+app.get("/api/search/:name", (req, res) => {
+  const name  = req.params.name
+  
+  const verificaName = data.products.filter(x => {
+    if(x.name_id.startsWith(name)) {
+      return x
+    }
+  })
+  console.log(verificaName)
+  return res.send(verificaName)
+})
+
 
 app.listen(3000, () => {
   console.log("Server Rodando na porta 3000")

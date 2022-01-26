@@ -3,62 +3,82 @@ module.exports =  {
     {
       id: "1",
       name: "Morango",
-      qntStock: 16,
-      image: '/images/morango.png'
+      name_id: "morango",
+      countInStock: 16,
+      image: '/images/morango.png',
+      price: 7
     },
     {
       id: "2",
       name: "Pera",
-      qntStock: 20,
-      image: '/images/pera.png'
+      name_id: "pera",
+      countInStock: 20,
+      image: '/images/pera.png',
+      price: 6
     },
     {
       id: "3",
       name: "Cebola",
-      qntStock: 12,
-      image: '/images/cebola.png'
+      name_id: "cebola",
+      countInStock: 12,
+      image: '/images/cebola.png',
+      price: 5
     },
     {
       id: "4",
       name: "Tomate",
-      qntStock: 8,
-      image: '/images/tomate.png'
+      name_id: "tomate",
+      countInStock: 8,
+      image: '/images/tomate.png',
+      price: 10
     },
     {
       id: "5",
       name: "Limão",
-      qntStock: 36,
-      image: '/images/limao.png'
+      name_id: "limao",
+      countInStock: 36,
+      image: '/images/limao.png',
+      price: 3.50
     },
     {
       id: "6",
       name: "Berinjela",
-      qntStock: 4,
-      image: '/images/berinjela.png'
+      name_id: "berinjela",
+      countInStock: 4,
+      image: '/images/berinjela.png',
+      price: 4
     },
     {
       id: "7",
       name: "Brocolis",
-      qntStock: 9,
-      image: '/images/brocolis.png'
+      name_id: "brocolis",
+      countInStock: 9,
+      image: '/images/brocolis.png',
+      price: 6.50
     },
     {
       id: "8",
       name: "Batata",
-      qntStock: 22,
-      image: '/images/batata.png'
+      name_id: "batata",
+      countInStock: 22,
+      image: '/images/batata.png',
+      price: 7
     },
     {
       id: "9",
       name: "Banana",
-      qntStock: 11,
-      image: '/images/banana.png'
+      name_id: "banana",
+      countInStock: 11,
+      image: '/images/banana.png',
+      price: 7.56
     },
     {
       id: "10",
       name: "Couve Flor",
-      qntStock: 33,
-      image: '/images/couverFlor.png'
+      name_id: "couveFlor",
+      countInStock: 33,
+      image: '/images/couverFlor.png',
+      price: 3.78
     },
 
   ]

@@ -56,53 +56,60 @@ const CartScreen = {
         image: product.image,
         price: product.price,
         countInStock: product.countInStock,
-        qtd: 1
+        qtd: 1  
       })
     }
 
     const cartItems = getCartItems()
     return `
-      <div>
-        <div>
-          <ul>
-            <li>
+      <div class="cart_container">
+        <div class="cart_sub">
+          <ul class="cart-list-container">
+            <li class="cart_title">
               <h3>Shoping Cart</h3>
+              <h4>Price</h4>
             </li>
             ${
               cartItems.length === 0 ?
                 "<div>Cart is empty. <a href='/#/'>Go Shopping</a></div>" :
                 cartItems.map(item => `
-                  <li>
+                  <li class="cart_product">
                     <div>
                       <img src="${item.image}" alt="${item.name}"/>
                     </div>
-                    <div class="cart_name">
-                      <div>
+                    <div class="cart_details">
+                      <div class="cart_name">
                         <a href="/#/product/${item.product}">
                           ${item.name}
                         </a>
                       </div>
-                      <div>
+                      <div class="cart_qtd">
                         Qtd: <select class="qtd_select" id="${item.product}">
                         ${
                           [...Array(item.countInStock).keys()].map(x => 
                             item.qtd === x+1 ?
-                            `<option selected value="${x+1}">${x+1}</option>`
-                            :
+                            `<option selected value="${x+1}">${x+1}</option>` :
                             `<option value="${x+1}">${x+1}</option>`
                           )
                         }
                         </select>
-                        <button type="button" class="btn_delete" id="${item.product}">Delete</button>
                       </div>
-                    </div>
-                    <div class="cart_price">
-                      ${item.price}
+                      <button type="button" class="btn_delete" id="${item.product}">Delete</button>
                     </div>
                   </li>
                 `).join('\n')
             }
           </ul>
+        </div>
+        <div>
+          <h4>
+            Sub-Total (${cartItems.reduce((a, c) => a + c.qtd, 0)} items)
+            :
+            $${cartItems.reduce((a, c) => a + c.price * c.qtd, 0)}
+          </h4>
+          <button>
+            finalize purchase
+          </button>
         </div>
       </div>
     `
