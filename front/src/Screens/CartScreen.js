@@ -83,19 +83,24 @@ const CartScreen = {
                           ${item.name}
                         </a>
                       </div>
-                      <div class="cart_qtd">
-                        Qtd: <select class="qtd_select" id="${item.product}">
-                        ${
-                          [...Array(item.countInStock).keys()].map(x => 
-                            item.qtd === x+1 ?
-                            `<option selected value="${x+1}">${x+1}</option>` :
-                            `<option value="${x+1}">${x+1}</option>`
-                          )
-                        }
-                        </select>
+                      <div class="cart_content">
+                        <div class="cart_qtd">
+                          Qtd: <select class="qtd_select" id="${item.product}">
+                          ${
+                            [...Array(item.countInStock).keys()].map(x => 
+                              item.qtd === x+1 ?
+                              `<option selected value="${x+1}">${x+1}</option>` :
+                              `<option value="${x+1}">${x+1}</option>`
+                            )
+                          }
+                          </select>
+                        </div>
+                        <button type="button" class="btn_delete" id="${item.product}">Delete</button>
                       </div>
-                      <button type="button" class="btn_delete" id="${item.product}">Delete</button>
                     </div>
+                    <div class="cart_price">
+                          $${item.price}
+                      </div>
                   </li>
                 `).join('\n')
             }

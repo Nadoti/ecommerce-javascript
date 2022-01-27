@@ -21,6 +21,7 @@ const SearchScreen = {
               <img class="main_img" src="${product.image}" alt="${product.name}" />
             </a>
             <h2 class="main_title">${product.name}</h2>
+            <p class="main_price">$${product.price}</p>
             <button class="btn_home" id="${product.id}">COMPRAR</button>
           </div>
         

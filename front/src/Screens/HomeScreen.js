@@ -27,6 +27,7 @@ const HomeScreen = {
               <img class="main_img" src="${product.image}" alt="">
             </a>
             <h2 class="main_title">${product.name}</h1>
+            <p class="main_price">$${product.price}</p>
             <button class="btn_home" id="${product.id}">COMPRAR</button>
           </div>
         

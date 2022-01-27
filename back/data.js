@@ -38,7 +38,7 @@ module.exports =  {
       name_id: "limao",
       countInStock: 36,
       image: '/images/limao.png',
-      price: 3.50
+      price: 3.52
     },
     {
       id: "6",
@@ -54,7 +54,7 @@ module.exports =  {
       name_id: "brocolis",
       countInStock: 9,
       image: '/images/brocolis.png',
-      price: 6.50
+      price: 6.57
     },
     {
       id: "8",
